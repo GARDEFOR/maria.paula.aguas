@@ -1,0 +1,55 @@
+﻿function () {
+    try { 
+        var insideIframe = window.top !== window.self;
+        if (insideIframe) {
+            let header = document.getElementById("header");
+            if (header) {
+                header.style.display = "none";
+            }
+
+            let pageheader = document.getElementById("pageheader");
+            if (pageheader) {
+                pageheader.style.display = "none";
+            }
+
+            let navigationcontrolSmall = document.getElementById("navigationcontrolSmall");
+            if (navigationcontrolSmall) {
+                navigationcontrolSmall.style.display = "none";
+            }
+
+            let pageheaderlinks = document.getElementById("pageheaderlinks");
+            if (pageheaderlinks) {
+                pageheaderlinks.style.display = "none";
+            }
+            let search = document.getElementById("search");
+            if (search) {
+                search.style.display = "none";
+            }
+
+            let elementos = document.querySelectorAll(".infotextdiv");
+            if (elementos) {
+                elementos.forEach(function (elemento) {
+                    elemento.style.display = "none";
+                });
+            }
+            let header_main_section = document.getElementById("header-main-section");
+            if (header_main_section) {
+                header_main_section.style.display = "none";
+            }
+            let breadcrumb_panel = document.getElementById("breadcrumb-panel");
+            if (breadcrumb_panel) {
+                breadcrumb_panel.style.display = "none";
+            }
+            let title_panel = document.getElementById("title-panel");
+            if (title_panel) {
+                title_panel.style.display = "none";
+            }
+            let content = document.getElementById("content");
+            if (content) {
+                content.style.marginTop = "-120px";
+            }
+        }
+    }catch (error) { console.log('Hola'+error); }
+};
+
+

@@ -1,0 +1,51 @@
+
+<!-- saved from url=(0141)https://serviciosssb.poli.edu.co/SisAcademico/bwzkport.pp?v_url=https://serviciosssb.poli.edu.co/SisAcademico/bwzksplt.P_Display_PaymentOrder -->
+<html><script async="false" type="text/javascript" src="chrome-extension://kjmoohlgokccodicjjfebfomlbljgfhk/in-page.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>
+
+
+                window.iframeLoad = function () {
+
+                iframe = document.getElementById("test");
+
+                let header =  iframe.contentWindow.document.getElementById("header");
+                if (header) {
+                    header.style.display = "none";
+                }
+
+                let pageheader = iframe.contentWindow.document.getElementById("pageheader");
+                if (pageheader) {
+                    pageheader.style.display = "none";
+                }
+
+                var navigationcontrolSmall = iframe.contentWindow.document.getElementById("navigationcontrolSmall");
+                navigationcontrolSmall.style.display = "none";
+
+                var pageheaderlinks = iframe.contentWindow.document.getElementById("pageheaderlinks");
+                pageheaderlinks.style.display = "none";
+
+                var search = iframe.contentWindow.document.getElementById("search");
+                search.style.display = "none";
+
+                var menuTrackInst = iframe.contentWindow.document.getElementById("menuTrackInst");
+                menuTrackInst.style.display = "none";
+
+                var content = iframe.contentWindow.document.getElementById("content");
+                content.style.marginTop = "-120px";
+
+                var pagefooter = iframe.contentWindow.document.getElementById("pagefooter");
+                pagefooter.style.display = "none";
+
+                var outerFooter = iframe.contentWindow.document.getElementById("outerFooter");
+                outerFooter.style.display = "none";
+
+                var footerApplicationBar = iframe.contentWindow.document.getElementById("footerApplicationBar");
+                footerApplicationBar.style.display = "none";
+
+                iframe.contentWindow.document.querySelectorAll("ul").forEach(el => el.remove());
+
+        };
+    
+</script>
+</head><body><iframe id="test" src="./bwzksplt.html" seamless="true" width="100%" height="100%" frameborder="0" ;="" onload="iframeLoad(this);"> 
+                </iframe> 
+</body></html>

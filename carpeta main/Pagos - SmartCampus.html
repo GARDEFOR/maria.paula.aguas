@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://smartcampus.poli.edu.co/Contenedor/Generico/43 -->
+<html lang="es"><script async="" src="./Pagos - SmartCampus_files/gtm.js.descarga"></script><script async="false" type="text/javascript" src="chrome-extension://kjmoohlgokccodicjjfebfomlbljgfhk/in-page.js"></script><!--begin::Head--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!--<base href="">--><base href=".">
+    
+    <title>Pagos - SmartCampus</title>
+    <meta name="description" content="Portal del estudiante Politécnico Grancolombiano.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--begin::Fonts-->
+    <link rel="stylesheet" href="./Pagos - SmartCampus_files/css">
+    <!--end::Fonts-->
+    <!--begin::Page Vendors Styles(used by this page)-->
+    <link href="./Pagos - SmartCampus_files/fullcalendar.bundle.css" rel="stylesheet" type="text/css">
+    <!--end::Page Vendors Styles-->
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <link href="./Pagos - SmartCampus_files/plugins.bundle.css" rel="stylesheet" type="text/css">
+    <link href="./Pagos - SmartCampus_files/prismjs.bundle.css" rel="stylesheet" type="text/css">
+    <link href="./Pagos - SmartCampus_files/style.bundle.css" rel="stylesheet" type="text/css">
+    <link href="./Pagos - SmartCampus_files/styles.css" rel="stylesheet" type="text/css">
+    <!--end::Global Theme Styles-->
+    <!--begin::Layout Themes(used by all pages)-->
+        <link href="./Pagos - SmartCampus_files/dark.css" rel="stylesheet" type="text/css">
+        <link href="./Pagos - SmartCampus_files/dark(1).css" rel="stylesheet" type="text/css">
+        <link href="./Pagos - SmartCampus_files/light.css" rel="stylesheet" type="text/css">
+        <link href="./Pagos - SmartCampus_files/light(1).css" rel="stylesheet" type="text/css">
+
+    <link href="./Pagos - SmartCampus_files/datatables.bundle.css" rel="stylesheet">
+
+    <!--end::Layout Themes-->
+    <link rel="shortcut icon" href="https://smartcampus.poli.edu.co/assets/media/logos/favicon.ico">
+<style type="text/css">.apexcharts-canvas {
+  position: relative;
+  user-select: none;
+  /* cannot give overflow: hidden as it will crop tooltips which overflow outside chart area */
+}
+
+
+/* scrollbar is not visible by default for legend, hence forcing the visibility */
+.apexcharts-canvas ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 6px;
+}
+
+.apexcharts-canvas ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+
+.apexcharts-inner {
+  position: relative;
+}
+
+.apexcharts-text tspan {
+  font-family: inherit;
+}
+
+.legend-mouseover-inactive {
+  transition: 0.15s ease all;
+  opacity: 0.20;
+}
+
+.apexcharts-series-collapsed {
+  opacity: 0;
+}
+
+.apexcharts-tooltip {
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px -4px #999;
+  cursor: default;
+  font-size: 14px;
+  left: 62px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 12;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light {
+  border: 1px solid #e3e3e3;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.apexcharts-tooltip.apexcharts-theme-dark {
+  color: #fff;
+  background: rgba(30, 30, 30, 0.8);
+}
+
+.apexcharts-tooltip * {
+  font-family: inherit;
+}
+
+
+.apexcharts-tooltip-title {
+  padding: 6px;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+  background: #ECEFF1;
+  border-bottom: 1px solid #ddd;
+}
+
+.apexcharts-tooltip.apexcharts-theme-dark .apexcharts-tooltip-title {
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid #333;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  display: inline-block;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.apexcharts-tooltip-text-z-label:empty,
+.apexcharts-tooltip-text-z-value:empty {
+  display: none;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  font-weight: 600;
+}
+
+.apexcharts-tooltip-marker {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 0px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.apexcharts-tooltip-series-group {
+  padding: 0 10px;
+  display: none;
+  text-align: left;
+  justify-content: left;
+  align-items: center;
+}
+
+.apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-marker {
+  opacity: 1;
+}
+
+.apexcharts-tooltip-series-group.apexcharts-active,
+.apexcharts-tooltip-series-group:last-child {
+  padding-bottom: 4px;
+}
+
+.apexcharts-tooltip-series-group-hidden {
+  opacity: 0;
+  height: 0;
+  line-height: 0;
+  padding: 0 !important;
+}
+
+.apexcharts-tooltip-y-group {
+  padding: 6px 0 5px;
+}
+
+.apexcharts-tooltip-candlestick {
+  padding: 4px 8px;
+}
+
+.apexcharts-tooltip-candlestick>div {
+  margin: 4px 0;
+}
+
+.apexcharts-tooltip-candlestick span.value {
+  font-weight: bold;
+}
+
+.apexcharts-tooltip-rangebar {
+  padding: 5px 8px;
+}
+
+.apexcharts-tooltip-rangebar .category {
+  font-weight: 600;
+  color: #777;
+}
+
+.apexcharts-tooltip-rangebar .series-name {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.apexcharts-xaxistooltip {
+  opacity: 0;
+  padding: 9px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-xaxistooltip:after,
+.apexcharts-xaxistooltip:before {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.apexcharts-xaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-left: -6px;
+}
+
+.apexcharts-xaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-left: -7px;
+}
+
+.apexcharts-xaxistooltip-bottom:after,
+.apexcharts-xaxistooltip-bottom:before {
+  bottom: 100%;
+}
+
+.apexcharts-xaxistooltip-top:after,
+.apexcharts-xaxistooltip-top:before {
+  top: 100%;
+}
+
+.apexcharts-xaxistooltip-bottom:after {
+  border-bottom-color: #ECEFF1;
+}
+
+.apexcharts-xaxistooltip-bottom:before {
+  border-bottom-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:after {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:before {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-top:after {
+  border-top-color: #ECEFF1
+}
+
+.apexcharts-xaxistooltip-top:before {
+  border-top-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-top.apexcharts-theme-dark:after {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-top.apexcharts-theme-dark:before {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-yaxistooltip {
+  opacity: 0;
+  padding: 4px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+}
+
+.apexcharts-yaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-yaxistooltip:after,
+.apexcharts-yaxistooltip:before {
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.apexcharts-yaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-top: -6px;
+}
+
+.apexcharts-yaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-top: -7px;
+}
+
+.apexcharts-yaxistooltip-left:after,
+.apexcharts-yaxistooltip-left:before {
+  left: 100%;
+}
+
+.apexcharts-yaxistooltip-right:after,
+.apexcharts-yaxistooltip-right:before {
+  right: 100%;
+}
+
+.apexcharts-yaxistooltip-left:after {
+  border-left-color: #ECEFF1;
+}
+
+.apexcharts-yaxistooltip-left:before {
+  border-left-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip-left.apexcharts-theme-dark:after {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-left.apexcharts-theme-dark:before {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-right:after {
+  border-right-color: #ECEFF1;
+}
+
+.apexcharts-yaxistooltip-right:before {
+  border-right-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip-right.apexcharts-theme-dark:after {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-right.apexcharts-theme-dark:before {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip.apexcharts-active {
+  opacity: 1;
+}
+
+.apexcharts-yaxistooltip-hidden {
+  display: none;
+}
+
+.apexcharts-xcrosshairs,
+.apexcharts-ycrosshairs {
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xcrosshairs.apexcharts-active,
+.apexcharts-ycrosshairs.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-ycrosshairs-hidden {
+  opacity: 0;
+}
+
+.apexcharts-selection-rect {
+  cursor: move;
+}
+
+.svg_select_boundingRect, .svg_select_points_rot {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.apexcharts-selection-rect + g .svg_select_boundingRect,
+.apexcharts-selection-rect + g .svg_select_points_rot {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.apexcharts-selection-rect + g .svg_select_points_l,
+.apexcharts-selection-rect + g .svg_select_points_r {
+  cursor: ew-resize;
+  opacity: 1;
+  visibility: visible;
+}
+
+.svg_select_points {
+  fill: #efefef;
+  stroke: #333;
+  rx: 2;
+}
+
+.apexcharts-svg.apexcharts-zoomable.hovering-zoom {
+  cursor: crosshair
+}
+
+.apexcharts-svg.apexcharts-zoomable.hovering-pan {
+  cursor: move
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-zoomin-icon,
+.apexcharts-zoomout-icon,
+.apexcharts-reset-icon,
+.apexcharts-pan-icon,
+.apexcharts-selection-icon,
+.apexcharts-menu-icon,
+.apexcharts-toolbar-custom-icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  line-height: 24px;
+  color: #6E8192;
+  text-align: center;
+}
+
+.apexcharts-zoom-icon svg,
+.apexcharts-zoomin-icon svg,
+.apexcharts-zoomout-icon svg,
+.apexcharts-reset-icon svg,
+.apexcharts-menu-icon svg {
+  fill: #6E8192;
+}
+
+.apexcharts-selection-icon svg {
+  fill: #444;
+  transform: scale(0.76)
+}
+
+.apexcharts-theme-dark .apexcharts-zoom-icon svg,
+.apexcharts-theme-dark .apexcharts-zoomin-icon svg,
+.apexcharts-theme-dark .apexcharts-zoomout-icon svg,
+.apexcharts-theme-dark .apexcharts-reset-icon svg,
+.apexcharts-theme-dark .apexcharts-pan-icon svg,
+.apexcharts-theme-dark .apexcharts-selection-icon svg,
+.apexcharts-theme-dark .apexcharts-menu-icon svg,
+.apexcharts-theme-dark .apexcharts-toolbar-custom-icon svg {
+  fill: #f3f4f5;
+}
+
+.apexcharts-canvas .apexcharts-zoom-icon.apexcharts-selected svg,
+.apexcharts-canvas .apexcharts-selection-icon.apexcharts-selected svg,
+.apexcharts-canvas .apexcharts-reset-zoom-icon.apexcharts-selected svg {
+  fill: #008FFB;
+}
+
+.apexcharts-theme-light .apexcharts-selection-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoom-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoomin-icon:hover svg,
+.apexcharts-theme-light .apexcharts-zoomout-icon:hover svg,
+.apexcharts-theme-light .apexcharts-reset-icon:hover svg,
+.apexcharts-theme-light .apexcharts-menu-icon:hover svg {
+  fill: #333;
+}
+
+.apexcharts-selection-icon,
+.apexcharts-menu-icon {
+  position: relative;
+}
+
+.apexcharts-reset-icon {
+  margin-left: 5px;
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-reset-icon,
+.apexcharts-menu-icon {
+  transform: scale(0.85);
+}
+
+.apexcharts-zoomin-icon,
+.apexcharts-zoomout-icon {
+  transform: scale(0.7)
+}
+
+.apexcharts-zoomout-icon {
+  margin-right: 3px;
+}
+
+.apexcharts-pan-icon {
+  transform: scale(0.62);
+  position: relative;
+  left: 1px;
+  top: 0px;
+}
+
+.apexcharts-pan-icon svg {
+  fill: #fff;
+  stroke: #6E8192;
+  stroke-width: 2;
+}
+
+.apexcharts-pan-icon.apexcharts-selected svg {
+  stroke: #008FFB;
+}
+
+.apexcharts-pan-icon:not(.apexcharts-selected):hover svg {
+  stroke: #333;
+}
+
+.apexcharts-toolbar {
+  position: absolute;
+  z-index: 11;
+  max-width: 176px;
+  text-align: right;
+  border-radius: 3px;
+  padding: 0px 6px 2px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apexcharts-menu {
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 3px;
+  right: 10px;
+  opacity: 0;
+  min-width: 110px;
+  transition: 0.15s ease all;
+  pointer-events: none;
+}
+
+.apexcharts-menu.apexcharts-menu-open {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-menu-item {
+  padding: 6px 7px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.apexcharts-theme-light .apexcharts-menu-item:hover {
+  background: #eee;
+}
+
+.apexcharts-theme-dark .apexcharts-menu {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .apexcharts-canvas:hover .apexcharts-toolbar {
+    opacity: 1;
+  }
+}
+
+.apexcharts-datalabel.apexcharts-element-hidden {
+  opacity: 0;
+}
+
+.apexcharts-pie-label,
+.apexcharts-datalabels,
+.apexcharts-datalabel,
+.apexcharts-datalabel-label,
+.apexcharts-datalabel-value {
+  cursor: default;
+  pointer-events: none;
+}
+
+.apexcharts-pie-label-delay {
+  opacity: 0;
+  animation-name: opaque;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.apexcharts-canvas .apexcharts-element-hidden {
+  opacity: 0;
+}
+
+.apexcharts-hide .apexcharts-series-points {
+  opacity: 0;
+}
+
+.apexcharts-gridline,
+.apexcharts-annotation-rect,
+.apexcharts-tooltip .apexcharts-marker,
+.apexcharts-area-series .apexcharts-area,
+.apexcharts-line,
+.apexcharts-zoom-rect,
+.apexcharts-toolbar svg,
+.apexcharts-area-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-line-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-radar-series path,
+.apexcharts-radar-series polygon {
+  pointer-events: none;
+}
+
+
+/* markers */
+
+.apexcharts-marker {
+  transition: 0.15s ease all;
+}
+
+@keyframes opaque {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Resize generated styles */
+
+@keyframes resizeanim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.resize-triggers {
+  animation: 1ms resizeanim;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.resize-triggers,
+.resize-triggers>div,
+.contract-trigger:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.resize-triggers>div {
+  background: #eee;
+  overflow: auto;
+}
+
+.contract-trigger:before {
+  width: 200%;
+  height: 200%;
+}</style></head>
+<!--end::Head-->
+<!--begin::Body-->
+<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable">
+
+
+    <!--begin::Main-->
+    <!--begin::Header Mobile-->
+    <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
+        <!--begin::Logo-->
+        <a href="https://smartcampus.poli.edu.co/">
+                <img alt="Logo" style="width: 200px;" src="./Pagos - SmartCampus_files/smartLogo1_blanco.png">
+        </a>
+        <!--end::Logo-->
+        <!--begin::Toolbar-->
+        <div class="d-flex align-items-center">
+            <!--begin::Aside Mobile Toggle-->
+            <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
+                <span></span>
+            </button>
+            <!--end::Aside Mobile Toggle-->
+            <!--begin::Header Menu Mobile Toggle-->
+            <button class="btn p-0 burger-icon ml-4" id="kt_header_mobile_toggle">
+                <span></span>
+            </button>
+            <!--end::Header Menu Mobile Toggle-->
+            <!--begin::Topbar Mobile Toggle-->
+            <button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle">
+                <span class="svg-icon svg-icon-xl">
+                    <!--begin::Svg Icon | path:~/assets/media/svg/icons/General/User.svg-->
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                            <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                            <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"></path>
+                        </g>
+                    </svg>
+                    <!--end::Svg Icon-->
+                </span>
+            </button>
+            <!--end::Topbar Mobile Toggle-->
+        </div>
+        <!--end::Toolbar-->
+    </div>
+    <!--end::Header Mobile-->
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Page-->
+        <div class="d-flex flex-row flex-column-fluid page">
+            <!--begin::Aside-->
+            <div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
+                <!--begin::Brand-->
+                <div class="brand flex-column-auto" id="kt_brand" style="" kt-hidden-height="65">
+                    <!--begin::Logo-->
+                    <a class="brand-logo" href="https://smartcampus.poli.edu.co/">
+                            <img alt="Logo" style="width: 200px;" src="./Pagos - SmartCampus_files/smartLogo1_blanco.png">
+                    </a>
+                    <!--end::Logo-->
+                    <!--begin::Toggle-->
+                    <button class="brand-toggle btn btn-sm px-0" type="button" id="kt_aside_toggle">
+                        <span class="svg-icon svg-icon svg-icon-xl">
+                            <!--begin::Svg Icon | path:~/assets/media/svg/icons/Navigation/Angle-double-left.svg-->
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                    <path d="M5.29288961,6.70710318 C4.90236532,6.31657888 4.90236532,5.68341391 5.29288961,5.29288961 C5.68341391,4.90236532 6.31657888,4.90236532 6.70710318,5.29288961 L12.7071032,11.2928896 C13.0856821,11.6714686 13.0989277,12.281055 12.7371505,12.675721 L7.23715054,18.675721 C6.86395813,19.08284 6.23139076,19.1103429 5.82427177,18.7371505 C5.41715278,18.3639581 5.38964985,17.7313908 5.76284226,17.3242718 L10.6158586,12.0300721 L5.29288961,6.70710318 Z" fill="#000000" fill-rule="nonzero" transform="translate(8.999997, 11.999999) scale(-1, 1) translate(-8.999997, -11.999999)"></path>
+                                    <path d="M10.7071009,15.7071068 C10.3165766,16.0976311 9.68341162,16.0976311 9.29288733,15.7071068 C8.90236304,15.3165825 8.90236304,14.6834175 9.29288733,14.2928932 L15.2928873,8.29289322 C15.6714663,7.91431428 16.2810527,7.90106866 16.6757187,8.26284586 L22.6757187,13.7628459 C23.0828377,14.1360383 23.1103407,14.7686056 22.7371482,15.1757246 C22.3639558,15.5828436 21.7313885,15.6103465 21.3242695,15.2371541 L16.0300699,10.3841378 L10.7071009,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(15.999997, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-15.999997, -11.999999)"></path>
+                                </g>
+                            </svg>
+                            <!--end::Svg Icon-->
+                        </span>
+                    </button>
+                    <!--end::Toolbar-->
+                </div>
+                <!--end::Brand-->
+                <!--begin::Aside Menu-->
+                <div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
+    <!--begin::Menu Container-->
+    <div id="kt_aside_menu" class="aside-menu my-4 scroll ps ps--active-y" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500" style="height: 833px; overflow: hidden;">
+        <!--begin::Menu Nav-->
+        <ul class="menu-nav">
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+                                                <a class="menu-link" href="/index.html">
+                                                    <span class="svg-icon menu-icon">                                 <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-28-020759/theme/html/demo1/dist/../src/media/svg/icons/Home/Home.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">                                         <rect x="0" y="0" width="24" height="24"></rect>                                         <path d="M3.95709826,8.41510662 L11.47855,3.81866389 C11.7986624,3.62303967 12.2013376,3.62303967 12.52145,3.81866389 L20.0429,8.41510557 C20.6374094,8.77841684 21,9.42493654 21,10.1216692 L21,19.0000642 C21,20.1046337 20.1045695,21.0000642 19,21.0000642 L4.99998155,21.0000673 C3.89541205,21.0000673 2.99998155,20.1046368 2.99998155,19.0000673 L2.99999828,10.1216672 C2.99999935,9.42493561 3.36258984,8.77841732 3.95709826,8.41510662 Z M10,13 C9.44771525,13 9,13.4477153 9,14 L9,17 C9,17.5522847 9.44771525,18 10,18 L14,18 C14.5522847,18 15,17.5522847 15,17 L15,14 C15,13.4477153 14.5522847,13 14,13 L10,13 Z" fill="#000000"></path>                                     </g>                                 </svg><!--end::Svg Icon-->                             </span>
+                                                    <span class="menu-text">Inicio</span>
+                                                </a>
+
+                                        </li>
+                                <li class="menu-section">
+                                    <h4 class="menu-text">Principal</h4>
+                                    <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+                                </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+                                                <a class="menu-link" href="Notas - SmartCampus.html">
+                                                    <span class="svg-icon menu-icon">                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">                                         <rect x="0" y="0" width="24" height="24"></rect>                                         <path d="M8,17.9148182 L8,5.96685884 C8,5.56391781 8.16211443,5.17792052 8.44982609,4.89581508 L10.965708,2.42895648 C11.5426798,1.86322723 12.4640974,1.85620921 13.0496196,2.41308426 L15.5337377,4.77566479 C15.8314604,5.0588212 16,5.45170806 16,5.86258077 L16,17.9148182 C16,18.7432453 15.3284271,19.4148182 14.5,19.4148182 L9.5,19.4148182 C8.67157288,19.4148182 8,18.7432453 8,17.9148182 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000000, 10.707409) rotate(-135.000000) translate(-12.000000, -10.707409) "></path>                                         <rect fill="#000000" opacity="0.3" x="5" y="20" width="15" height="2" rx="1"></rect>                                     </g>                                 </svg>                             </span>
+                                                    <span class="menu-text">Notas</span>
+                                                </a>
+
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+                                                <a class="menu-link" href="https://smartcampus.poli.edu.co/Academico/ActividadesVirtual/8">
+                                                    <span class="far fas fa-calendar-check menu-icon">                                  </span>
+                                                    <span class="menu-text">Actividades Canvas</span>
+                                                </a>
+
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" title="" class="menu-item " aria-haspopup="true" data-original-title="Aquí podrás &lt;span class=&#39;label label-inline font-weight-bold label-light-primary&#39;&gt;pagar en línea&lt;/span&gt; y descargar el recibo de pago para pago en &lt;code&gt;bancos &lt;/code&gt;">
+                                                <a class="menu-link" href="Pago - SmartCampus.html">
+                                                    <span class="svg-icon menu-icon">                                     <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-10-081610/theme/html/demo1/dist/../src/media/svg/icons/Shopping/Wallet.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">                                             <rect x="0" y="0" width="24" height="24"></rect>                                             <circle fill="#000000" opacity="0.3" cx="20.5" cy="12.5" r="1.5"></circle>                                             <rect fill="#000000" opacity="0.3" transform="translate(12.000000, 6.500000) rotate(-15.000000) translate(-12.000000, -6.500000) " x="3" y="3" width="18" height="7" rx="1"></rect>                                             <path d="M22,9.33681558 C21.5453723,9.12084552 21.0367986,9 20.5,9 C18.5670034,9 17,10.5670034 17,12.5 C17,14.4329966 18.5670034,16 20.5,16 C21.0367986,16 21.5453723,15.8791545 22,15.6631844 L22,18 C22,19.1045695 21.1045695,20 20,20 L4,20 C2.8954305,20 2,19.1045695 2,18 L2,6 C2,4.8954305 2.8954305,4 4,4 L20,4 C21.1045695,4 22,4.8954305 22,6 L22,9.33681558 Z" fill="#000000"></path>                                         </g>                                     </svg><!--end::Svg Icon-->                                 </span>
+                                                    <span class="menu-text">Pagos boleto activo</span>
+                                                </a>
+
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" title="" class="menu-item menu-item-active" aria-haspopup="true" data-original-title="Aquí puedes crear tus boletos de pago y realizar pago en línea.">
+                                                <a class="menu-link" href="Pagos - SmartCampus.html">
+                                                    <span class="svg-icon menu-icon">                                     <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-10-081610/theme/html/demo1/dist/../src/media/svg/icons/Shopping/Wallet.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">                                             <rect x="0" y="0" width="24" height="24"></rect>                                             <circle fill="#000000" opacity="0.3" cx="20.5" cy="12.5" r="1.5"></circle>                                             <rect fill="#000000" opacity="0.3" transform="translate(12.000000, 6.500000) rotate(-15.000000) translate(-12.000000, -6.500000) " x="3" y="3" width="18" height="7" rx="1"></rect>                                             <path d="M22,9.33681558 C21.5453723,9.12084552 21.0367986,9 20.5,9 C18.5670034,9 17,10.5670034 17,12.5 C17,14.4329966 18.5670034,16 20.5,16 C21.0367986,16 21.5453723,15.8791545 22,15.6631844 L22,18 C22,19.1045695 21.1045695,20 20,20 L4,20 C2.8954305,20 2,19.1045695 2,18 L2,6 C2,4.8954305 2.8954305,4 4,4 L20,4 C21.1045695,4 22,4.8954305 22,6 L22,9.33681558 Z" fill="#000000"></path>                                         </g>                                     </svg><!--end::Svg Icon-->                                 </span>
+                                                    <span class="menu-text">Pagos</span>
+                                                </a>
+
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" title="" class="menu-item " aria-haspopup="true" data-original-title="Aquí puedes dividir tu recibo de pago de matrícula, si necesitas usar diferentes medios de pago.">
+                                                <a class="menu-link" href="Pagos mixtos - SmartCampus.html">
+                                                    <span class="svg-icon menu-icon">                                     <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-10-081610/theme/html/demo1/dist/../src/media/svg/icons/Shopping/Wallet.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">                                             <rect x="0" y="0" width="24" height="24"></rect>                                             <circle fill="#000000" opacity="0.3" cx="20.5" cy="12.5" r="1.5"></circle>                                             <rect fill="#000000" opacity="0.3" transform="translate(12.000000, 6.500000) rotate(-15.000000) translate(-12.000000, -6.500000) " x="3" y="3" width="18" height="7" rx="1"></rect>                                             <path d="M22,9.33681558 C21.5453723,9.12084552 21.0367986,9 20.5,9 C18.5670034,9 17,10.5670034 17,12.5 C17,14.4329966 18.5670034,16 20.5,16 C21.0367986,16 21.5453723,15.8791545 22,15.6631844 L22,18 C22,19.1045695 21.1045695,20 20,20 L4,20 C2.8954305,20 2,19.1045695 2,18 L2,6 C2,4.8954305 2.8954305,4 4,4 L20,4 C21.1045695,4 22,4.8954305 22,6 L22,9.33681558 Z" fill="#000000"></path>                                         </g>                                     </svg><!--end::Svg Icon--></span>
+                                                    <span class="menu-text">Pagos mixtos</span>
+                                                </a>
+
+                                        </li>
+                                <li class="menu-section">
+                                    <h4 class="menu-text">Académico</h4>
+                                    <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+                                </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" title="" class="menu-item " aria-haspopup="true" data-original-title="Aquí puedes solicitar los diferentes modelos de certificados institucionales.">
+                                                <a class="menu-link" href="https://smartcampus.poli.edu.co/Contenedor/Generico/11">
+                                                    <span class="svg-icon menu-icon">                                     <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-28-020759/theme/html/demo1/dist/../src/media/svg/icons/Communication/Clipboard-list.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">                                             <rect x="0" y="0" width="24" height="24"></rect>                                             <path d="M8,3 L8,3.5 C8,4.32842712 8.67157288,5 9.5,5 L14.5,5 C15.3284271,5 16,4.32842712 16,3.5 L16,3 L18,3 C19.1045695,3 20,3.8954305 20,5 L20,21 C20,22.1045695 19.1045695,23 18,23 L6,23 C4.8954305,23 4,22.1045695 4,21 L4,5 C4,3.8954305 4.8954305,3 6,3 L8,3 Z" fill="#000000" opacity="0.3"></path>                                             <path d="M11,2 C11,1.44771525 11.4477153,1 12,1 C12.5522847,1 13,1.44771525 13,2 L14.5,2 C14.7761424,2 15,2.22385763 15,2.5 L15,3.5 C15,3.77614237 14.7761424,4 14.5,4 L9.5,4 C9.22385763,4 9,3.77614237 9,3.5 L9,2.5 C9,2.22385763 9.22385763,2 9.5,2 L11,2 Z" fill="#000000"></path>                                             <rect fill="#000000" opacity="0.3" x="10" y="9" width="7" height="2" rx="1"></rect>                                             <rect fill="#000000" opacity="0.3" x="7" y="9" width="2" height="2" rx="1"></rect>                                             <rect fill="#000000" opacity="0.3" x="7" y="13" width="2" height="2" rx="1"></rect>                                             <rect fill="#000000" opacity="0.3" x="10" y="13" width="7" height="2" rx="1"></rect>                                             <rect fill="#000000" opacity="0.3" x="7" y="17" width="2" height="2" rx="1"></rect>                                             <rect fill="#000000" opacity="0.3" x="10" y="17" width="7" height="2" rx="1"></rect>                                         </g>                                     </svg><!--end::Svg Icon-->                                 </span>
+                                                    <span class="menu-text">Certificados</span>
+                                                </a>
+
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" title="" class="menu-item " aria-haspopup="true" data-original-title="Aquí podrás realizar solicitudes tales como Reintegro, Cambio de modalidad, Cambio de programa, etc.">
+                                                <a class="menu-link" href="https://smartcampus.poli.edu.co/Contenedor/Generico/12">
+                                                    <span class="svg-icon menu-icon">                                     <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-10-081610/theme/html/demo1/dist/../src/media/svg/icons/Communication/Sending mail.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">                                             <rect x="0" y="0" width="24" height="24"></rect>                                             <path d="M4,16 L5,16 C5.55228475,16 6,16.4477153 6,17 C6,17.5522847 5.55228475,18 5,18 L4,18 C3.44771525,18 3,17.5522847 3,17 C3,16.4477153 3.44771525,16 4,16 Z M1,11 L5,11 C5.55228475,11 6,11.4477153 6,12 C6,12.5522847 5.55228475,13 5,13 L1,13 C0.44771525,13 6.76353751e-17,12.5522847 0,12 C-6.76353751e-17,11.4477153 0.44771525,11 1,11 Z M3,6 L5,6 C5.55228475,6 6,6.44771525 6,7 C6,7.55228475 5.55228475,8 5,8 L3,8 C2.44771525,8 2,7.55228475 2,7 C2,6.44771525 2.44771525,6 3,6 Z" fill="#000000" opacity="0.3"></path>                                             <path d="M10,6 L22,6 C23.1045695,6 24,6.8954305 24,8 L24,16 C24,17.1045695 23.1045695,18 22,18 L10,18 C8.8954305,18 8,17.1045695 8,16 L8,8 C8,6.8954305 8.8954305,6 10,6 Z M21.0849395,8.0718316 L16,10.7185839 L10.9150605,8.0718316 C10.6132433,7.91473331 10.2368262,8.02389331 10.0743092,8.31564728 C9.91179228,8.60740125 10.0247174,8.9712679 10.3265346,9.12836619 L15.705737,11.9282847 C15.8894428,12.0239051 16.1105572,12.0239051 16.294263,11.9282847 L21.6734654,9.12836619 C21.9752826,8.9712679 22.0882077,8.60740125 21.9256908,8.31564728 C21.7631738,8.02389331 21.3867567,7.91473331 21.0849395,8.0718316 Z" fill="#000000"></path>                                         </g>                                     </svg><!--end::Svg Icon-->                                 </span>
+                                                    <span class="menu-text">Tramites academicos</span>
+                                                </a>
+
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" title="" class="menu-item " aria-haspopup="true" data-original-title="Aquí podrás realizar tu solicitud de Diplomado o Semestre Coterminal como opción de grado.">
+                                                <a class="menu-link" href="https://smartcampus.poli.edu.co/Contenedor/Generico/33">
+                                                    <span class="svg-icon menu-icon">                                     <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-10-081610/theme/html/demo1/dist/../src/media/svg/icons/Devices/Camera.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">                                             <rect x="0" y="0" width="24" height="24"></rect>                                             <path d="M5,7 L19,7 C20.1045695,7 21,7.8954305 21,9 L21,17 C21,18.1045695 20.1045695,19 19,19 L5,19 C3.8954305,19 3,18.1045695 3,17 L3,9 C3,7.8954305 3.8954305,7 5,7 Z M12,17 C14.209139,17 16,15.209139 16,13 C16,10.790861 14.209139,9 12,9 C9.790861,9 8,10.790861 8,13 C8,15.209139 9.790861,17 12,17 Z" fill="#000000"></path>                                             <rect fill="#000000" opacity="0.3" x="9" y="4" width="6" height="2" rx="1"></rect>                                             <circle fill="#000000" opacity="0.3" cx="12" cy="13" r="2"></circle>                                         </g>                                     </svg><!--end::Svg Icon-->                                 </span>
+                                                    <span class="menu-text">Opciones de grado</span>
+                                                </a>
+
+                                        </li>
+                                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                        <a href="javascript:;" class="menu-link menu-toggle">
+                                            <span class="svg-icon menu-icon">                                     <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-28-020759/theme/html/demo1/dist/../src/media/svg/icons/Layout/Layout-4-blocks.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">                                             <rect x="0" y="0" width="24" height="24"></rect>                                             <rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5"></rect>                                             <path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3"></path>                                         </g>                                     </svg><!--end::Svg Icon-->                                 </span>
+                                            <span class="menu-text">Asignaturas</span>
+                                            <i class="menu-arrow"></i>
+                                        </a>
+                                        <div class="menu-submenu">
+                                            <i class="menu-arrow"></i>
+                                            <ul class="menu-subnav">
+                                                <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                                    <span class="menu-link">
+                                                        <span class="menu-text">Asignaturas</span>
+                                                    </span>
+                                                </li>
+                                                                <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" title="" class="menu-item " aria-haspopup="true" data-original-title="Aquí puedes realizar la inscripción y cancelación de asignaturas, así como consultar tu horario.">
+
+                                                                        <a class="menu-link" href="https://smartcampus.poli.edu.co/Academico/InscripcionMaterias/21">
+                                                                            <span class="far fa-calendar-alt menu-icon">                                 </span>
+                                                                            <i class="menu-bullet menu-bullet-dot">
+                                                                                <span></span>
+                                                                            </i>
+                                                                            <span class="menu-text">Inscripción, Cancelación y Horario</span>
+                                                                        </a>
+
+
+                                                                </li>
+                                                                <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+
+                                                                        <a class="menu-link" href="https://smartcampus.poli.edu.co/Contenedor/Generico/9">
+                                                                            <span class="far fa-calendar-alt menu-icon">                                 </span>
+                                                                            <i class="menu-bullet menu-bullet-dot">
+                                                                                <span></span>
+                                                                            </i>
+                                                                            <span class="menu-text">Horario</span>
+                                                                        </a>
+
+
+                                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+                                                <a class="menu-link" href="https://smartcampus.poli.edu.co/Contenedor/Generico/53">
+                                                    <span class="svg-icon menu-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">         <rect x="0" y="0" width="24" height="24"></rect>         <path d="M5.84026576,8 L18.1597342,8 C19.1999115,8 20.0664437,8.79732479 20.1528258,9.83390904 L20.8194924,17.833909 C20.9112219,18.9346631 20.0932459,19.901362 18.9924919,19.9930915 C18.9372479,19.9976952 18.8818364,20 18.8264009,20 L5.1735991,20 C4.0690296,20 3.1735991,19.1045695 3.1735991,18 C3.1735991,17.9445645 3.17590391,17.889153 3.18050758,17.833909 L3.84717425,9.83390904 C3.93355627,8.79732479 4.80008849,8 5.84026576,8 Z M10.5,10 C10.2238576,10 10,10.2238576 10,10.5 L10,11.5 C10,11.7761424 10.2238576,12 10.5,12 L13.5,12 C13.7761424,12 14,11.7761424 14,11.5 L14,10.5 C14,10.2238576 13.7761424,10 13.5,10 L10.5,10 Z" fill="#000000"></path>         <path d="M10,8 L8,8 L8,7 C8,5.34314575 9.34314575,4 11,4 L13,4 C14.6568542,4 16,5.34314575 16,7 L16,8 L14,8 L14,7 C14,6.44771525 13.5522847,6 13,6 L11,6 C10.4477153,6 10,6.44771525 10,7 L10,8 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>     </g> </svg></span>
+                                                    <span class="menu-text">Jovenes a la U</span>
+                                                </a>
+
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" title="" class="menu-item " aria-haspopup="true" data-original-title="Aquí podrás registrarte para inscribirte a las pruebas Saber PRO y TyT">
+                                                <a class="menu-link" href="https://smartcampus.poli.edu.co/SaberPro/Registro/44">
+                                                    <span class="svg-icon menu-icon"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-04-09-093151/theme/html/demo1/dist/../src/media/svg/icons/Files/Selected-file.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">         <polygon points="0 0 24 0 24 24 0 24"></polygon>         <path d="M4.85714286,1 L11.7364114,1 C12.0910962,1 12.4343066,1.12568431 12.7051108,1.35473959 L17.4686994,5.3839416 C17.8056532,5.66894833 18,6.08787823 18,6.52920201 L18,19.0833333 C18,20.8738751 17.9795521,21 16.1428571,21 L4.85714286,21 C3.02044787,21 3,20.8738751 3,19.0833333 L3,2.91666667 C3,1.12612489 3.02044787,1 4.85714286,1 Z M8,12 C7.44771525,12 7,12.4477153 7,13 C7,13.5522847 7.44771525,14 8,14 L15,14 C15.5522847,14 16,13.5522847 16,13 C16,12.4477153 15.5522847,12 15,12 L8,12 Z M8,16 C7.44771525,16 7,16.4477153 7,17 C7,17.5522847 7.44771525,18 8,18 L11,18 C11.5522847,18 12,17.5522847 12,17 C12,16.4477153 11.5522847,16 11,16 L8,16 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>         <path d="M6.85714286,3 L14.7364114,3 C15.0910962,3 15.4343066,3.12568431 15.7051108,3.35473959 L20.4686994,7.3839416 C20.8056532,7.66894833 21,8.08787823 21,8.52920201 L21,21.0833333 C21,22.8738751 20.9795521,23 19.1428571,23 L6.85714286,23 C5.02044787,23 5,22.8738751 5,21.0833333 L5,4.91666667 C5,3.12612489 5.02044787,3 6.85714286,3 Z M8,12 C7.44771525,12 7,12.4477153 7,13 C7,13.5522847 7.44771525,14 8,14 L15,14 C15.5522847,14 16,13.5522847 16,13 C16,12.4477153 15.5522847,12 15,12 L8,12 Z M8,16 C7.44771525,16 7,16.4477153 7,17 C7,17.5522847 7.44771525,18 8,18 L11,18 C11.5522847,18 12,17.5522847 12,17 C12,16.4477153 11.5522847,16 11,16 L8,16 Z" fill="#000000" fill-rule="nonzero"></path>     </g> </svg><!--end::Svg Icon--></span>
+                                                    <span class="menu-text">Saber Pro y TyT</span>
+                                                </a>
+
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+                                                <a class="menu-link" href="https://smartcampus.poli.edu.co/Acudiente/Index/48">
+                                                    <span class="svg-icon menu-icon"> <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-10-081610/theme/html/demo1/dist/../src/media/svg/icons/Shopping/Wallet.svg--> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">         <polygon points="0 0 24 0 24 24 0 24"></polygon>         <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>         <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"></path>     </g> </svg> <!--end::Svg Icon-->                                 </span>
+                                                    <span class="menu-text">Registro de acudiente</span>
+                                                </a>
+
+                                        </li>
+                                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                        <a href="javascript:;" class="menu-link menu-toggle">
+                                            <span class="svg-icon menu-icon">                                     <!--begin::Svg Icon | path:~/assets/media/svg/icons/Design/Bucket.svg-->                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">                                             <rect x="0" y="0" width="24" height="24"></rect>                                             <path d="M5,5 L5,15 C5,15.5948613 5.25970314,16.1290656 5.6719139,16.4954176 C5.71978107,16.5379595 5.76682388,16.5788906 5.81365532,16.6178662 C5.82524933,16.6294602 15,7.45470952 15,7.45470952 C15,6.9962515 15,6.17801499 15,5 L5,5 Z M5,3 L15,3 C16.1045695,3 17,3.8954305 17,5 L17,15 C17,17.209139 15.209139,19 13,19 L7,19 C4.790861,19 3,17.209139 3,15 L3,5 C3,3.8954305 3.8954305,3 5,3 Z" fill="#000000" fill-rule="nonzero" transform="translate(10.000000, 11.000000) rotate(-315.000000) translate(-10.000000, -11.000000)"></path>                                             <path d="M20,22 C21.6568542,22 23,20.6568542 23,19 C23,17.8954305 22,16.2287638 20,14 C18,16.2287638 17,17.8954305 17,19 C17,20.6568542 18.3431458,22 20,22 Z" fill="#000000" opacity="0.3"></path>                                         </g>                                     </svg>                                     <!--end::Svg Icon-->                                 </span>
+                                            <span class="menu-text">Investigación</span>
+                                            <i class="menu-arrow"></i>
+                                        </a>
+                                        <div class="menu-submenu">
+                                            <i class="menu-arrow"></i>
+                                            <ul class="menu-subnav">
+                                                <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                                    <span class="menu-link">
+                                                        <span class="menu-text">Investigación</span>
+                                                    </span>
+                                                </li>
+                                                                <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+
+                                                                        <a class="menu-link" href="https://smartcampus.poli.edu.co/Contenedor/Generico/18">
+                                                                            
+                                                                            <i class="menu-bullet menu-bullet-dot">
+                                                                                <span></span>
+                                                                            </i>
+                                                                            <span class="menu-text">Semilleros</span>
+                                                                        </a>
+
+
+                                                                </li>
+                                                                <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+
+                                                                        <a class="menu-link" href="https://smartcampus.poli.edu.co/Contenedor/Generico/19">
+                                                                            
+                                                                            <i class="menu-bullet menu-bullet-dot">
+                                                                                <span></span>
+                                                                            </i>
+                                                                            <span class="menu-text">Proyectos de investigación formativa</span>
+                                                                        </a>
+
+
+                                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                        <a href="javascript:;" class="menu-link menu-toggle">
+                                            <span class="far fa-handshake menu-icon">                                 </span>
+                                            <span class="menu-text">Practicas</span>
+                                            <i class="menu-arrow"></i>
+                                        </a>
+                                        <div class="menu-submenu">
+                                            <i class="menu-arrow"></i>
+                                            <ul class="menu-subnav">
+                                                <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                                    <span class="menu-link">
+                                                        <span class="menu-text">Practicas</span>
+                                                    </span>
+                                                </li>
+                                                                <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+
+                                                                            <a href="https://practicas.poli.edu.co/callback.aspx?O=1" target="_blank" class="menu-link">
+                                                                                
+                                                                                <i class="menu-bullet menu-bullet-dot">
+                                                                                    <span></span>
+                                                                                </i>
+                                                                                <span class="menu-text">Registro de hoja de vida</span>
+                                                                            </a>
+
+
+                                                                </li>
+                                                                <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+
+                                                                            <a href="https://practicas.poli.edu.co/callback.aspx?O=2" target="_blank" class="menu-link">
+                                                                                
+                                                                                <i class="menu-bullet menu-bullet-dot">
+                                                                                    <span></span>
+                                                                                </i>
+                                                                                <span class="menu-text">Legalización contrato de aprendizaje</span>
+                                                                            </a>
+
+
+                                                                </li>
+                                                                <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+
+                                                                            <a href="https://practicas.poli.edu.co/callback.aspx?O=3" target="_blank" class="menu-link">
+                                                                                
+                                                                                <i class="menu-bullet menu-bullet-dot">
+                                                                                    <span></span>
+                                                                                </i>
+                                                                                <span class="menu-text">Legalización por vinculación laboral</span>
+                                                                            </a>
+
+
+                                                                </li>
+                                                                <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+
+                                                                            <a href="https://practicas.poli.edu.co/callback.aspx?O=4" target="_blank" class="menu-link">
+                                                                                
+                                                                                <i class="menu-bullet menu-bullet-dot">
+                                                                                    <span></span>
+                                                                                </i>
+                                                                                <span class="menu-text">Seguimiento académico</span>
+                                                                            </a>
+
+
+                                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                <li class="menu-section">
+                                    <h4 class="menu-text">Financiero</h4>
+                                    <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+                                </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+                                                <a class="menu-link" href="https://smartcampus.poli.edu.co/Contenedor/Generico/23">
+                                                    <span class="svg-icon menu-icon">                                     <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-10-081610/theme/html/demo1/dist/../src/media/svg/icons/Shopping/Sale1.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">                                             <rect x="0" y="0" width="24" height="24"></rect>                                             <path d="M16.0322024,5.68722152 L5.75790403,15.945742 C5.12139076,16.5812778 5.12059836,17.6124773 5.75613416,18.2489906 C5.75642891,18.2492858 5.75672377,18.2495809 5.75701875,18.2498759 L5.75701875,18.2498759 C6.39304347,18.8859006 7.42424328,18.8859006 8.060268,18.2498759 C8.06056298,18.2495809 8.06085784,18.2492858 8.0611526,18.2489906 L18.3196731,7.9746922 C18.9505124,7.34288268 18.9501191,6.31942463 18.3187946,5.68810005 L18.3187946,5.68810005 C17.68747,5.05677547 16.6640119,5.05638225 16.0322024,5.68722152 Z" fill="#000000" fill-rule="nonzero"></path>                                             <path d="M9.85714286,6.92857143 C9.85714286,8.54730513 8.5469533,9.85714286 6.93006028,9.85714286 C5.31316726,9.85714286 4,8.54730513 4,6.92857143 C4,5.30983773 5.31316726,4 6.93006028,4 C8.5469533,4 9.85714286,5.30983773 9.85714286,6.92857143 Z M20,17.0714286 C20,18.6901623 18.6898104,20 17.0729174,20 C15.4560244,20 14.1428571,18.6901623 14.1428571,17.0714286 C14.1428571,15.4497247 15.4560244,14.1428571 17.0729174,14.1428571 C18.6898104,14.1428571 20,15.4497247 20,17.0714286 Z" fill="#000000" opacity="0.3"></path>                                         </g>                                     </svg><!--end::Svg Icon-->                                 </span>
+                                                    <span class="menu-text">Becas</span>
+                                                </a>
+
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+                                                <a class="menu-link" href="https://smartcampus.poli.edu.co/Auxilios/SolicitudesLista/47">
+                                                    <span class="svg-icon menu-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">         <rect x="0" y="0" width="24" height="24"></rect>         <path d="M5.84026576,8 L18.1597342,8 C19.1999115,8 20.0664437,8.79732479 20.1528258,9.83390904 L20.8194924,17.833909 C20.9112219,18.9346631 20.0932459,19.901362 18.9924919,19.9930915 C18.9372479,19.9976952 18.8818364,20 18.8264009,20 L5.1735991,20 C4.0690296,20 3.1735991,19.1045695 3.1735991,18 C3.1735991,17.9445645 3.17590391,17.889153 3.18050758,17.833909 L3.84717425,9.83390904 C3.93355627,8.79732479 4.80008849,8 5.84026576,8 Z M10.5,10 C10.2238576,10 10,10.2238576 10,10.5 L10,11.5 C10,11.7761424 10.2238576,12 10.5,12 L13.5,12 C13.7761424,12 14,11.7761424 14,11.5 L14,10.5 C14,10.2238576 13.7761424,10 13.5,10 L10.5,10 Z" fill="#000000"></path>         <path d="M10,8 L8,8 L8,7 C8,5.34314575 9.34314575,4 11,4 L13,4 C14.6568542,4 16,5.34314575 16,7 L16,8 L14,8 L14,7 C14,6.44771525 13.5522847,6 13,6 L11,6 C10.4477153,6 10,6.44771525 10,7 L10,8 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>     </g> </svg></span>
+                                                    <span class="menu-text">Otras ayudas económicas</span>
+                                                </a>
+
+                                        </li>
+                                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                        <a href="javascript:;" class="menu-link menu-toggle">
+                                            <span class="svg-icon menu-icon">                                     <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-10-081610/theme/html/demo1/dist/../src/media/svg/icons/Shopping/Credit-card.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">                                             <rect x="0" y="0" width="24" height="24"></rect>                                             <rect fill="#000000" opacity="0.3" x="2" y="5" width="20" height="14" rx="2"></rect>                                             <rect fill="#000000" x="2" y="8" width="20" height="3"></rect>                                             <rect fill="#000000" opacity="0.3" x="16" y="14" width="4" height="2" rx="1"></rect>                                         </g>                                     </svg><!--end::Svg Icon-->                                 </span>
+                                            <span class="menu-text">Icetex</span>
+                                            <i class="menu-arrow"></i>
+                                        </a>
+                                        <div class="menu-submenu">
+                                            <i class="menu-arrow"></i>
+                                            <ul class="menu-subnav">
+                                                <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                                    <span class="menu-link">
+                                                        <span class="menu-text">Icetex</span>
+                                                    </span>
+                                                </li>
+                                                                <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+
+                                                                        <a class="menu-link" href="https://smartcampus.poli.edu.co/Contenedor/Generico/29">
+                                                                            
+                                                                            <i class="menu-bullet menu-bullet-dot">
+                                                                                <span></span>
+                                                                            </i>
+                                                                            <span class="menu-text">Renovación</span>
+                                                                        </a>
+
+
+                                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+                                                <a class="menu-link" href="https://smartcampus.poli.edu.co/Contenedor/Generico/25">
+                                                    <span class="svg-icon menu-icon">                                     <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-10-081610/theme/html/demo1/dist/../src/media/svg/icons/Text/Undo.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">                                             <rect x="0" y="0" width="24" height="24"></rect>                                             <path d="M21.4451171,17.7910156 C21.4451171,16.9707031 21.6208984,13.7333984 19.0671874,11.1650391 C17.3484374,9.43652344 14.7761718,9.13671875 11.6999999,9 L11.6999999,4.69307548 C11.6999999,4.27886191 11.3642135,3.94307548 10.9499999,3.94307548 C10.7636897,3.94307548 10.584049,4.01242035 10.4460626,4.13760526 L3.30599678,10.6152626 C2.99921905,10.8935795 2.976147,11.3678924 3.2544639,11.6746702 C3.26907199,11.6907721 3.28437331,11.7062312 3.30032452,11.7210037 L10.4403903,18.333467 C10.7442966,18.6149166 11.2188212,18.596712 11.5002708,18.2928057 C11.628669,18.1541628 11.6999999,17.9721616 11.6999999,17.7831961 L11.6999999,13.5 C13.6531249,13.5537109 15.0443703,13.6779456 16.3083984,14.0800781 C18.1284272,14.6590944 19.5349747,16.3018455 20.5280411,19.0083314 L20.5280247,19.0083374 C20.6363903,19.3036749 20.9175496,19.5 21.2321404,19.5 L21.4499999,19.5 C21.4499999,19.0068359 21.4451171,18.2255859 21.4451171,17.7910156 Z" fill="#000000" fill-rule="nonzero"></path>                                         </g>                                     </svg><!--end::Svg Icon-->                                 </span>
+                                                    <span class="menu-text">Aplazamientos y devoluciones</span>
+                                                </a>
+
+                                        </li>
+                                <li class="menu-section">
+                                    <h4 class="menu-text">Equipos</h4>
+                                    <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+                                </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+                                                <a class="menu-link" href="https://smartcampus.poli.edu.co/Academico/CentroMedios/27">
+                                                    <span class="svg-icon menu-icon">                                     <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-10-081610/theme/html/demo1/dist/../src/media/svg/icons/Devices/Camera.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">                                             <rect x="0" y="0" width="24" height="24"></rect>                                             <path d="M5,7 L19,7 C20.1045695,7 21,7.8954305 21,9 L21,17 C21,18.1045695 20.1045695,19 19,19 L5,19 C3.8954305,19 3,18.1045695 3,17 L3,9 C3,7.8954305 3.8954305,7 5,7 Z M12,17 C14.209139,17 16,15.209139 16,13 C16,10.790861 14.209139,9 12,9 C9.790861,9 8,10.790861 8,13 C8,15.209139 9.790861,17 12,17 Z" fill="#000000"></path>                                             <rect fill="#000000" opacity="0.3" x="9" y="4" width="6" height="2" rx="1"></rect>                                             <circle fill="#000000" opacity="0.3" cx="12" cy="13" r="2"></circle>                                         </g>                                     </svg><!--end::Svg Icon-->                                 </span>
+                                                    <span class="menu-text">Centro de medios</span>
+                                                </a>
+
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="right" data-theme="dark" data-html="true" class="menu-item " aria-haspopup="true" data-original-title="" title="">
+                                                <a class="menu-link" href="https://smartcampus.poli.edu.co/Academico/SepararEquipo/28">
+                                                    <span class="svg-icon menu-icon">                                     <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-10-081610/theme/html/demo1/dist/../src/media/svg/icons/Devices/Display1.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">                                             <rect x="0" y="0" width="24" height="24"></rect>                                             <path d="M11,20 L11,17 C11,16.4477153 11.4477153,16 12,16 C12.5522847,16 13,16.4477153 13,17 L13,20 L15.5,20 C15.7761424,20 16,20.2238576 16,20.5 C16,20.7761424 15.7761424,21 15.5,21 L8.5,21 C8.22385763,21 8,20.7761424 8,20.5 C8,20.2238576 8.22385763,20 8.5,20 L11,20 Z" fill="#000000" opacity="0.3"></path>                                             <path d="M3,5 L21,5 C21.5522847,5 22,5.44771525 22,6 L22,16 C22,16.5522847 21.5522847,17 21,17 L3,17 C2.44771525,17 2,16.5522847 2,16 L2,6 C2,5.44771525 2.44771525,5 3,5 Z M4.5,8 C4.22385763,8 4,8.22385763 4,8.5 C4,8.77614237 4.22385763,9 4.5,9 L13.5,9 C13.7761424,9 14,8.77614237 14,8.5 C14,8.22385763 13.7761424,8 13.5,8 L4.5,8 Z M4.5,10 C4.22385763,10 4,10.2238576 4,10.5 C4,10.7761424 4.22385763,11 4.5,11 L7.5,11 C7.77614237,11 8,10.7761424 8,10.5 C8,10.2238576 7.77614237,10 7.5,10 L4.5,10 Z" fill="#000000"></path>                                         </g>                                     </svg><!--end::Svg Icon-->                                 </span>
+                                                    <span class="menu-text">Separar equipo virtual</span>
+                                                </a>
+
+                                        </li>
+        </ul>
+        <!--end::Menu Nav-->
+    <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 833px; right: 4px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 300px;"></div></div></div>
+    <!--end::Menu Container-->
+</div>
+                <!--end::Aside Menu-->
+            </div>
+            <!--end::Aside-->
+            <!--begin::Wrapper-->
+            <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+                <!--begin::Header-->
+                <div id="kt_header" class="header header-fixed">
+                    <!--begin::Container-->
+                    <div class="container-fluid d-flex align-items-stretch justify-content-between">
+                        <!--begin::Header Menu Wrapper-->
+                        <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+                            <!--begin::Header Menu-->
+                            <div id="kt_header_menu" class="header-menu header-menu-mobile header-menu-layout-default">
+                                <!--begin::Header Nav-->
+                                <ul class="menu-nav">
+                                    <li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here menu-item-active" data-menu-toggle="click" aria-haspopup="true" id="canvas_access">
+                                        <a href="https://poli.instructure.com/login/saml/242" target="_blank" class="menu-link">
+                                            <span class="menu-text">Ingreso a <img alt="Logo" style="width: 90px; padding-left: 4px" src="./Pagos - SmartCampus_files/canvas-lms-logo.png"></span>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item menu-item-submenu" data-menu-toggle="click" aria-haspopup="true">
+                                        <a href="javascript:;" class="menu-link menu-toggle">
+                                            <span class="menu-text">Sitios de interes</span>
+                                            <i class="menu-arrow"></i>
+                                        </a>
+                                        <div class="menu-submenu menu-submenu-fixed menu-submenu-left" style="width:1000px">
+                                            <div class="menu-subnav">
+                                                <ul class="menu-content">
+                                                    <li class="menu-item">
+                                                        <h3 class="menu-heading menu-toggle">
+                                                            <i class="menu-bullet menu-bullet-dot">
+                                                                <span></span>
+                                                            </i>
+                                                            <span class="menu-text">General</span>
+                                                            <i class="menu-arrow"></i>
+                                                        </h3>
+                                                        <ul class="menu-inner">
+                                                            <li class="menu-item" aria-haspopup="true">
+                                                                <a href="https://www.poli.edu.co/content/biblioteca" target="_blank" class="menu-link">
+                                                                    <i class="menu-bullet menu-bullet-line">
+                                                                        <span></span>
+                                                                    </i>
+                                                                    <span class="menu-text">Biblioteca</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="menu-item" aria-haspopup="true">
+                                                                <a href="https://calendario.poligran.edu.co/" target="_blank" class="menu-link">
+                                                                    <i class="menu-bullet menu-bullet-line">
+                                                                        <span></span>
+                                                                    </i>
+                                                                    <span class="menu-text">Calendario acádemico</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="menu-item" aria-haspopup="true">
+                                                                <a class="menu-link" href="https://smartcampus.poli.edu.co/Academico/Reglamento">
+                                                                    <i class="menu-bullet menu-bullet-line">
+                                                                        <span></span>
+                                                                    </i>
+                                                                    <span class="menu-text">Reglamento estudiantil</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="menu-item" aria-haspopup="true">
+                                                                <a target="_blank" href="https://login.microsoftonline.com/?whr=poligran.edu.co" class="menu-link">
+                                                                    <i class="menu-bullet menu-bullet-line">
+                                                                        <span></span>
+                                                                    </i>
+                                                                    <span class="menu-text">Correo Electrónico</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="menu-item" aria-haspopup="true">
+                                                                <a href="http://bienestarpoli.poligran.edu.co/" target="_blank" class="menu-link">
+                                                                    <i class="menu-bullet menu-bullet-line">
+                                                                        <span></span>
+                                                                    </i>
+                                                                    <span class="menu-text">Bienestar</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <h3 class="menu-heading menu-toggle">
+                                                            <i class="menu-bullet menu-bullet-dot">
+                                                                <span></span>
+                                                            </i>
+                                                            <span class="menu-text">Virtual</span>
+                                                            <i class="menu-arrow"></i>
+                                                        </h3>
+                                                        <ul class="menu-inner">
+                                                            <li class="menu-item" aria-haspopup="true">
+                                                                <a href="https://caja.poligran.edu.co/" target="_blank" class="menu-link">
+                                                                    <i class="menu-bullet menu-bullet-line">
+                                                                        <span></span>
+                                                                    </i>
+                                                                    <span class="menu-text">Caja de herramientas</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!--end::Header Nav-->
+                            </div>
+                            <!--end::Header Menu-->
+                        </div>
+                        <!--end::Header Menu Wrapper-->
+                        <!--begin::Topbar-->
+                        <div class="topbar">
+                            <!--begin::Notifications-->
+                                <div class="dropdown">
+                                    <!--begin::Toggle-->
+                                    <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+                                        <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
+                                            <span class="svg-icon svg-icon-xl svg-icon-primary">
+                                                <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-10-081610/theme/html/demo1/dist/../src/media/svg/icons/General/Notifications1.svg-->
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                        <path d="M17,12 L18.5,12 C19.3284271,12 20,12.6715729 20,13.5 C20,14.3284271 19.3284271,15 18.5,15 L5.5,15 C4.67157288,15 4,14.3284271 4,13.5 C4,12.6715729 4.67157288,12 5.5,12 L7,12 L7.5582739,6.97553494 C7.80974924,4.71225688 9.72279394,3 12,3 C14.2772061,3 16.1902508,4.71225688 16.4417261,6.97553494 L17,12 Z" fill="#000000"></path>
+                                                        <rect fill="#000000" opacity="0.3" x="10" y="16" width="4" height="4" rx="2"></rect>
+                                                    </g>
+                                                </svg><!--end::Svg Icon-->
+                                            </span>
+                                            <span class="pulse-ring"></span>
+                                        </div>
+                                    </div>
+                                    <!--end::Toggle-->
+                                    <!--begin::Dropdown-->
+                                    <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
+                                        <form>
+                                            <!--begin::Header-->
+                                            <div class="d-flex flex-column pt-12 bgi-size-cover bgi-no-repeat rounded-top" style="        background-color: #0f385a
+    ">
+                                                <!--begin::Title-->
+                                                <h4 class="d-flex flex-center rounded-top">
+                                                    <span class="text-white">Notificaciones</span>
+                                                </h4>
+                                                <!--end::Title-->
+                                                <!--begin::Tabs-->
+                                                <ul class="nav nav-bold nav-tabs nav-tabs-line nav-tabs-line-3x nav-tabs-line-transparent-white nav-tabs-line-active-border-success mt-3 px-8" role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active show" data-toggle="tab" href="https://smartcampus.poli.edu.co/Contenedor/Generico/43#topbar_notifications_notifications">Nuevas</a>
+                                                    </li>
+                                                </ul>
+                                                <!--end::Tabs-->
+                                            </div>
+                                            <!--end::Header-->
+                                            <!--begin::Content-->
+                                            <div class="tab-content">
+                                                <!--begin::Tabpane-->
+                                                <div class="tab-pane active show p-8" id="topbar_notifications_notifications" role="tabpanel">
+                                                    <!--begin::Scroll-->
+                                                    <div class="scroll pr-7 mr-n7 ps" data-scroll="true" data-height="300" data-mobile-height="200" style="height: 300px; overflow: hidden;">
+                                                                <!--begin::Item-->
+                                                                <div class="d-flex align-items-center mb-6">
+                                                                    <!--begin::Symbol-->
+                                                                    <div class="symbol symbol-40 symbol-light-primary mr-5">
+                                                                        <span class="symbol-label">
+                                                                            <span class="svg-icon svg-icon-lg svg-icon-primary">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                                        <path d="M17,12 L18.5,12 C19.3284271,12 20,12.6715729 20,13.5 C20,14.3284271 19.3284271,15 18.5,15 L5.5,15 C4.67157288,15 4,14.3284271 4,13.5 C4,12.6715729 4.67157288,12 5.5,12 L7,12 L7.5582739,6.97553494 C7.80974924,4.71225688 9.72279394,3 12,3 C14.2772061,3 16.1902508,4.71225688 16.4417261,6.97553494 L17,12 Z" fill="#000000"></path>
+                                                                                        <rect fill="#000000" opacity="0.3" x="10" y="16" width="4" height="4" rx="2"></rect>
+                                                                                    </g>
+                                                                                </svg>
+                                                                            </span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Symbol-->
+                                                                    <!--begin::Text-->
+                                                                    <div class="d-flex flex-column font-weight-bold">
+                                                                        <a href="https://www.youtube.com/watch?v=mJXn84UJKiM&amp;ab_channel=ComunicacionesPoli" class="text-dark text-hover-primary mb-1 font-size-lg">Presentación del Nuevo Portal Web del POLI</a>
+                                                                        <span class="text-muted"></span>
+                                                                    </div>
+                                                                    <!--end::Text-->
+                                                                </div>
+                                                                <!--end::Item-->
+                                                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+                                                    <!--end::Scroll-->
+                                                    <!--begin::Action-->
+                                                    <div class="d-flex flex-center pt-7">
+                                                        <a href="https://smartcampus.poli.edu.co/Contenedor/Generico/43#" class="btn btn-light-primary font-weight-bold text-center">Ver todas</a>
+                                                    </div>
+                                                    <!--end::Action-->
+                                                </div>
+                                                <!--end::Tabpane-->
+                                            </div>
+                                            <!--end::Content-->
+                                        </form>
+                                    </div>
+                                    <!--end::Dropdown-->
+                                </div>
+
+                            <!--end::Notifications-->
+                            <!--begin::Correo-->
+                            <div class="topbar-item">
+                                <a target="_blank" href="https://login.microsoftonline.com/?whr=poligran.edu.co" class="btn btn-icon btn-clean btn-lg mr-1">
+                                    <span class="svg-icon svg-icon-xl svg-icon-primary">
+                                        <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-28-020759/theme/html/demo1/dist/../src/media/svg/icons/Communication/Readed-mail.svg-->
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <rect x="0" y="0" width="24" height="24"></rect>
+                                                <path d="M4.875,20.75 C4.63541667,20.75 4.39583333,20.6541667 4.20416667,20.4625 L2.2875,18.5458333 C1.90416667,18.1625 1.90416667,17.5875 2.2875,17.2041667 C2.67083333,16.8208333 3.29375,16.8208333 3.62916667,17.2041667 L4.875,18.45 L8.0375,15.2875 C8.42083333,14.9041667 8.99583333,14.9041667 9.37916667,15.2875 C9.7625,15.6708333 9.7625,16.2458333 9.37916667,16.6291667 L5.54583333,20.4625 C5.35416667,20.6541667 5.11458333,20.75 4.875,20.75 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                                                <path d="M12.9835977,18 C12.7263047,14.0909841 9.47412135,11 5.5,11 C4.98630124,11 4.48466491,11.0516454 4,11.1500272 L4,7 C4,5.8954305 4.8954305,5 6,5 L20,5 C21.1045695,5 22,5.8954305 22,7 L22,16 C22,17.1045695 21.1045695,18 20,18 L12.9835977,18 Z M19.1444251,6.83964668 L13,10.1481833 L6.85557487,6.83964668 C6.4908718,6.6432681 6.03602525,6.77972206 5.83964668,7.14442513 C5.6432681,7.5091282 5.77972206,7.96397475 6.14442513,8.16035332 L12.6444251,11.6603533 C12.8664074,11.7798822 13.1335926,11.7798822 13.3555749,11.6603533 L19.8555749,8.16035332 C20.2202779,7.96397475 20.3567319,7.5091282 20.1603533,7.14442513 C19.9639747,6.77972206 19.5091282,6.6432681 19.1444251,6.83964668 Z" fill="#000000"></path>
+                                            </g>
+                                        </svg><!--end::Svg Icon-->
+                                    </span>
+                                </a>
+                            </div>
+                            <!--end::Correo-->
+                            <!--begin::User-->
+                            <div class="topbar-item">
+                                <div class="btn btn-icon btn-icon-mobile w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
+                                    <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hola,</span>
+                                    <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">mpaguas</span>
+                                    <span class="symbol symbol-lg-35 symbol-25 symbol-light-success">
+                                        <span class="symbol-label font-size-h5 font-weight-bold">M</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <!--end::User-->
+                        </div>
+                        <!--end::Topbar-->
+                    </div>
+                    <!--end::Container-->
+                </div>
+                <!--end::Header-->
+                <!--begin::Content-->
+                
+
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Subheader-->
+    <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
+        <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+            <!--begin::Info-->
+            <div class="d-flex align-items-center flex-wrap mr-2">
+                <!--begin::Page Title-->
+                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Pagos</h5>
+                <!--end::Page Title-->
+                <!--begin::Actions-->
+                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
+                <span class="text-muted font-weight-bold mr-4"></span>
+                <!--end::Actions-->
+            </div>
+            <!--end::Info-->
+            <div class="d-flex align-items-center flex-wrap">
+
+
+                    <!--begin::Button-->
+                    <!--<a data-toggle="modal" data-target="#exampleModalSizeXl" class="btn btn-primary btn-fixed-height font-weight-bold px-2 px-lg-5 mr-2">
+            <span class="svg-icon svg-icon-lg">-->
+                    <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-28-020759/theme/html/demo1/dist/../src/media/svg/icons/Code/Question-circle.svg-->
+                    <!--<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <rect x="0" y="0" width="24" height="24" />
+                <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10" />
+                <path d="M12,16 C12.5522847,16 13,16.4477153 13,17 C13,17.5522847 12.5522847,18 12,18 C11.4477153,18 11,17.5522847 11,17 C11,16.4477153 11.4477153,16 12,16 Z M10.591,14.868 L10.591,13.209 L11.851,13.209 C13.447,13.209 14.602,11.991 14.602,10.395 C14.602,8.799 13.447,7.581 11.851,7.581 C10.234,7.581 9.121,8.799 9.121,10.395 L7.336,10.395 C7.336,7.875 9.31,5.922 11.851,5.922 C14.392,5.922 16.387,7.875 16.387,10.395 C16.387,12.915 14.392,14.868 11.851,14.868 L10.591,14.868 Z" fill="#000000" />
+            </g>
+        </svg>-->
+                    <!--end::Svg Icon-->
+                    <!--</span>
+            <span class="d-none d-md-inline">¿Necesitas ayuda?</span>
+        </a>-->
+                    <!--end::Button-->
+<div class="d-flex align-items-center flex-wrap">
+    <!--begin::Button-->
+    <a data-toggle="modal" data-target="#exampleModalSizeXl" class="btn btn-primary btn-fixed-height font-weight-bold px-2 px-lg-5 mr-2">
+        <span class="svg-icon svg-icon-lg">
+            <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-12-28-020759/theme/html/demo1/dist/../src/media/svg/icons/Code/Question-circle.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect x="0" y="0" width="24" height="24"></rect>
+                    <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10"></circle>
+                    <path d="M12,16 C12.5522847,16 13,16.4477153 13,17 C13,17.5522847 12.5522847,18 12,18 C11.4477153,18 11,17.5522847 11,17 C11,16.4477153 11.4477153,16 12,16 Z M10.591,14.868 L10.591,13.209 L11.851,13.209 C13.447,13.209 14.602,11.991 14.602,10.395 C14.602,8.799 13.447,7.581 11.851,7.581 C10.234,7.581 9.121,8.799 9.121,10.395 L7.336,10.395 C7.336,7.875 9.31,5.922 11.851,5.922 C14.392,5.922 16.387,7.875 16.387,10.395 C16.387,12.915 14.392,14.868 11.851,14.868 L10.591,14.868 Z" fill="#000000"></path>
+                </g>
+            </svg><!--end::Svg Icon-->
+        </span>
+        <span class="d-none d-md-inline">¿Cómo realizar el proceso?</span>
+    </a>
+    <!--end::Button-->
+</div>
+            </div>
+        </div>
+    </div>
+    <!--end::Subheader-->
+    <!--begin::Entry-->
+    <div class="d-flex flex-column-fluid">
+        <!--begin::Container-->
+        <div class="container-fluid">
+            <!--begin::Row-->
+            <div class="ibox-content" style="margin:0px;padding:0px;overflow:hidden">
+                        <iframe class="iframeContent" src="./Pagos - SmartCampus_files/SSB.html" frameborder="0"></iframe>
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Entry-->
+</div>
+
+
+<div class="modal fade" id="exampleModalSizeXl" tabindex="-1" role="dialog" aria-labelledby="exampleModalSizeXl" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">¿Necesitas ayuda?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i aria-hidden="true" class="ki ki-close"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <title>pagos</title>    	<table width="1050" border="0" cellspacing="0" cellpadding="0" align="center">   <tbody>     <tr>       <td background="./Pagos - SmartCampus_files/inst_pagos_01.png" width="1050" height="90"></td>     </tr>     <tr>       <td background="./Pagos - SmartCampus_files/inst_pagos_02.png" width="1050" height="109"><p align="left" style="font-family:open sans;color:#152B49;font-size:14pt;margin-left: -110px;margin-top:-5px;text-align: center">El recuadro central <b>te muestra el estado<br> actual</b> de tus pagos pendientes</p></td>     </tr>     <tr>       <td colspan="2" background="./Pagos - SmartCampus_files/inst_pagos_03.png" width="1050" height="283"></td>    	  </tr>     <tr>       <td colspan="2" background="./Pagos - SmartCampus_files/inst_pagos_04.png" width="1050" height="190"><p align="left" style="font-family:open sans;color:#152B49;font-size:14pt;margin-left: -20px;margin-top:-85px;text-align: center">En dado caso que tengas <b>saldos pendientes a facturar</b><br>y demás <b>órdenes de pago institucionales</b></p></td>     </tr>     <tr>       <td colspan="2" background="./Pagos - SmartCampus_files/inst_pagos_05.png" width="1050" height="200"></td>     </tr>     <tr>       <td background="./Pagos - SmartCampus_files/inst_pagos_06.png" width="1050" height="153"><p style="font-family:open sans;color:#152B49;font-size:14pt;margin-left:710px;margin-top:-254px;text-align: center;line-height: 1.3">Puedes <b>generar</b> la<br> factura en  <b>PDF<br> para realizar el<br> pago en entidad<br> bancaria</b> o <b>podrás<br>  pagar en línea</b></p></td>     </tr>   </tbody> </table> <script defer="" src="./Pagos - SmartCampus_files/vef91dfe02fce4ee0ad053f6de4f175db1715022073587" integrity="sha512-sDIX0kl85v1Cl5tu4WGLZCpH/dV9OHbA4YlKCuCiMmOQIk4buzoYDZSFj+TvC71mOBLh8CDC/REgE0GX0xcbjA==" data-cf-beacon="{&quot;rayId&quot;:&quot;88c119f20e2c3efa&quot;,&quot;version&quot;:&quot;2024.4.1&quot;,&quot;token&quot;:&quot;f7efb452897740acbbb41717ab3133bb&quot;}" crossorigin="anonymous"></script>
+ 
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Entendido</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalContacto" tabindex="-1" role="dialog" aria-labelledby="modalContacto" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Contacto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i aria-hidden="true" class="ki ki-close"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <script type="text/javascript">
+
+     function DibujarFrame(valor) {
+
+        $("#DivUrlFrame").html(valor);
+     }
+
+     </script>
+                <!--end::Content-->
+                <!--begin::Footer-->
+                <div class="footer bg-white  py-4 d-flex flex-lg-column" id="kt_footer">
+                    <!--begin::Container-->
+                    <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
+                        <!--begin::Copyright-->
+                        <div class="text-dark order-2 order-md-1">
+                            <span class="text-muted font-weight-bold mr-2">2021©</span>
+                            <a href="https://www.poli.edu.co/" target="_blank" class="text-dark-75 text-hover-primary">Politécnico Grancolombiano</a>
+                        </div>
+                        <!--end::Copyright-->
+                        <!--begin::Nav-->
+                        <div class="nav nav-dark">
+                            <span>Línea Gratuita 01 8000 180 779&nbsp;</span>
+                            <span>Bogotá (571) 7440740&nbsp;</span>
+                            <span>Medellín (574) 6040200&nbsp;</span>
+                        </div>
+                        <!--end::Nav-->
+                    </div>
+                    <!--end::Container-->
+                </div>
+                <!--end::Footer-->
+            </div>
+            <!--end::Wrapper-->
+        </div>
+        <!--end::Page-->
+    </div>
+    <!--end::Main-->
+    <!-- begin::User Panel-->
+    <div id="kt_quick_user" class="offcanvas offcanvas-right p-10">
+        <!--begin::Header-->
+        <div class="offcanvas-header d-flex align-items-center justify-content-between pb-5" style="" kt-hidden-height="40">
+            <h3 class="font-weight-bold m-0">
+                Perfil de usuario
+            </h3>
+            <a href="https://smartcampus.poli.edu.co/Contenedor/Generico/43#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_quick_user_close">
+                <i class="ki ki-close icon-xs text-muted"></i>
+            </a>
+        </div>
+        <!--end::Header-->
+        <!--begin::Content-->
+        <div class="offcanvas-content pr-5 mr-n5 scroll ps" style="height: 818px; overflow: hidden;">
+            <!--begin::Header-->
+            <div class="d-flex align-items-center mt-5">
+                <div class="symbol symbol-100 mr-5">
+                    <div class="symbol-label" style="background-image:url(&#39;../../assets/media/users/blank.png&#39;)"></div>
+                </div>
+                <div class="d-flex flex-column">
+                    <a href="https://smartcampus.poli.edu.co/Contenedor/Generico/43#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">mpaguas</a>
+                    <div class="text-muted mt-1">Estudiante - 356564</div>
+                    <div class="text-muted mt-1">Codigo - 100329537</div>
+                    <div class="navi mt-2">
+                        <a href="https://smartcampus.poli.edu.co/Contenedor/Generico/43#" class="navi-item">
+                            <span class="navi-link p-0 pb-2">
+                                <span class="navi-icon mr-1">
+                                    <span class="svg-icon svg-icon-lg svg-icon-primary">
+                                        <!--begin::Svg Icon | path:~/assets/media/svg/icons/Communication/Mail-notification.svg-->
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <rect x="0" y="0" width="24" height="24"></rect>
+                                                <path d="M21,12.0829584 C20.6747915,12.0283988 20.3407122,12 20,12 C16.6862915,12 14,14.6862915 14,18 C14,18.3407122 14.0283988,18.6747915 14.0829584,19 L5,19 C3.8954305,19 3,18.1045695 3,17 L3,8 C3,6.8954305 3.8954305,6 5,6 L19,6 C20.1045695,6 21,6.8954305 21,8 L21,12.0829584 Z M18.1444251,7.83964668 L12,11.1481833 L5.85557487,7.83964668 C5.4908718,7.6432681 5.03602525,7.77972206 4.83964668,8.14442513 C4.6432681,8.5091282 4.77972206,8.96397475 5.14442513,9.16035332 L11.6444251,12.6603533 C11.8664074,12.7798822 12.1335926,12.7798822 12.3555749,12.6603533 L18.8555749,9.16035332 C19.2202779,8.96397475 19.3567319,8.5091282 19.1603533,8.14442513 C18.9639747,7.77972206 18.5091282,7.6432681 18.1444251,7.83964668 Z" fill="#000000"></path>
+                                                <circle fill="#000000" opacity="0.3" cx="19.5" cy="17.5" r="2.5"></circle>
+                                            </g>
+                                        </svg>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                </span>
+                                <span class="navi-text text-muted text-hover-primary">mpaguas</span>
+                            </span>
+                        </a>
+                        <button type="button" onclick="logOutBanner()" id="btnCerrarSesion" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Cerrar sesión</button>
+                    </div>
+                </div>
+            </div>
+            <!--end::Header-->
+            <!--begin::Separator-->
+            <div class="separator separator-dashed mt-8 mb-5"></div>
+            <!--end::Separator-->
+            <!--begin::Nav-->
+            <div class="navi navi-spacer-x-0 p-0">
+                <!--begin::Item-->
+                <a href="https://cpo.poligran.edu.co/" target="_blank" class="navi-item">
+                    <div class="navi-link">
+                        <div class="symbol symbol-40 bg-light mr-3">
+                            <div class="symbol-label">
+                                <span class="svg-icon svg-icon-md svg-icon-success">
+                                    <!--begin::Svg Icon | path:~/assets/media/svg/icons/General/Notification2.svg-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                            <path d="M13.2070325,4 C13.0721672,4.47683179 13,4.97998812 13,5.5 C13,8.53756612 15.4624339,11 18.5,11 C19.0200119,11 19.5231682,10.9278328 20,10.7929675 L20,17 C20,18.6568542 18.6568542,20 17,20 L7,20 C5.34314575,20 4,18.6568542 4,17 L4,7 C4,5.34314575 5.34314575,4 7,4 L13.2070325,4 Z" fill="#000000"></path>
+                                            <circle fill="#000000" opacity="0.3" cx="18.5" cy="5.5" r="2.5"></circle>
+                                        </g>
+                                    </svg>
+                                    <!--end::Svg Icon-->
+                                </span>
+                            </div>
+                        </div>
+                        <div class="navi-text">
+                            <div class="font-weight-bold">Cuenta</div>
+                            <div class="text-muted">
+                                Cambia tu contraseña
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--end:Item-->
+                <!--begin::Item-->
+                <a class="navi-item" href="https://smartcampus.poli.edu.co/Perfil">
+                    <div class="navi-link">
+                        <div class="symbol symbol-40 bg-light mr-3">
+                            <div class="symbol-label">
+                                <span class="svg-icon svg-icon-md svg-icon-warning">
+                                    <!--begin::Svg Icon | path:~/assets/media/svg/icons/Shopping/Chart-bar1.svg-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                            <rect fill="#000000" opacity="0.3" x="12" y="4" width="3" height="13" rx="1.5"></rect>
+                                            <rect fill="#000000" opacity="0.3" x="7" y="9" width="3" height="8" rx="1.5"></rect>
+                                            <path d="M5,19 L20,19 C20.5522847,19 21,19.4477153 21,20 C21,20.5522847 20.5522847,21 20,21 L4,21 C3.44771525,21 3,20.5522847 3,20 L3,4 C3,3.44771525 3.44771525,3 4,3 C4.55228475,3 5,3.44771525 5,4 L5,19 Z" fill="#000000" fill-rule="nonzero"></path>
+                                            <rect fill="#000000" opacity="0.3" x="17" y="11" width="3" height="6" rx="1.5"></rect>
+                                        </g>
+                                    </svg>
+                                    <!--end::Svg Icon-->
+                                </span>
+                            </div>
+                        </div>
+                        <div class="navi-text">
+                            <div class="font-weight-bold">Mi perfil</div>
+                            <div class="text-muted">Actualiza tus datos</div>
+                        </div>
+                    </div>
+                </a>
+                <!--end:Item-->
+                <!--begin::Item-->
+                <a target="_blank" href="https://login.microsoftonline.com/?whr=poligran.edu.co" class="navi-item">
+                    <div class="navi-link">
+                        <div class="symbol symbol-40 bg-light mr-3">
+                            <div class="symbol-label">
+                                <span class="svg-icon svg-icon-md svg-icon-primary">
+                                    <!--begin::Svg Icon | path:~/assets/media/svg/icons/Communication/Mail-opened.svg-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                            <path d="M6,2 L18,2 C18.5522847,2 19,2.44771525 19,3 L19,12 C19,12.5522847 18.5522847,13 18,13 L6,13 C5.44771525,13 5,12.5522847 5,12 L5,3 C5,2.44771525 5.44771525,2 6,2 Z M7.5,5 C7.22385763,5 7,5.22385763 7,5.5 C7,5.77614237 7.22385763,6 7.5,6 L13.5,6 C13.7761424,6 14,5.77614237 14,5.5 C14,5.22385763 13.7761424,5 13.5,5 L7.5,5 Z M7.5,7 C7.22385763,7 7,7.22385763 7,7.5 C7,7.77614237 7.22385763,8 7.5,8 L10.5,8 C10.7761424,8 11,7.77614237 11,7.5 C11,7.22385763 10.7761424,7 10.5,7 L7.5,7 Z" fill="#000000" opacity="0.3"></path>
+                                            <path d="M3.79274528,6.57253826 L12,12.5 L20.2072547,6.57253826 C20.4311176,6.4108595 20.7436609,6.46126971 20.9053396,6.68513259 C20.9668779,6.77033951 21,6.87277228 21,6.97787787 L21,17 C21,18.1045695 20.1045695,19 19,19 L5,19 C3.8954305,19 3,18.1045695 3,17 L3,6.97787787 C3,6.70173549 3.22385763,6.47787787 3.5,6.47787787 C3.60510559,6.47787787 3.70753836,6.51099993 3.79274528,6.57253826 Z" fill="#000000"></path>
+                                        </g>
+                                    </svg>
+                                    <!--end::Svg Icon-->
+                                </span>
+                            </div>
+                        </div>
+                        <div class="navi-text">
+                            <div class="font-weight-bold">Correo electrónico</div>
+                            <div class="text-muted">Revisa los mensajes de tu bandeja</div>
+                        </div>
+                    </div>
+                </a>
+                <!--end:Item-->
+                <!--begin::Item-->
+                <a href="https://www.poli.edu.co/consulta-alumnos#/home" target="_blank" class="navi-item">
+                    <div class="navi-link">
+                        <div class="symbol symbol-40 bg-light mr-3">
+                            <div class="symbol-label">
+                                <span class="svg-icon svg-icon-md svg-icon-danger">
+                                    <!--begin::Svg Icon | path:~/assets/media/svg/icons/Files/Selected-file.svg-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                            <path d="M4.85714286,1 L11.7364114,1 C12.0910962,1 12.4343066,1.12568431 12.7051108,1.35473959 L17.4686994,5.3839416 C17.8056532,5.66894833 18,6.08787823 18,6.52920201 L18,19.0833333 C18,20.8738751 17.9795521,21 16.1428571,21 L4.85714286,21 C3.02044787,21 3,20.8738751 3,19.0833333 L3,2.91666667 C3,1.12612489 3.02044787,1 4.85714286,1 Z M8,12 C7.44771525,12 7,12.4477153 7,13 C7,13.5522847 7.44771525,14 8,14 L15,14 C15.5522847,14 16,13.5522847 16,13 C16,12.4477153 15.5522847,12 15,12 L8,12 Z M8,16 C7.44771525,16 7,16.4477153 7,17 C7,17.5522847 7.44771525,18 8,18 L11,18 C11.5522847,18 12,17.5522847 12,17 C12,16.4477153 11.5522847,16 11,16 L8,16 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                                            <path d="M6.85714286,3 L14.7364114,3 C15.0910962,3 15.4343066,3.12568431 15.7051108,3.35473959 L20.4686994,7.3839416 C20.8056532,7.66894833 21,8.08787823 21,8.52920201 L21,21.0833333 C21,22.8738751 20.9795521,23 19.1428571,23 L6.85714286,23 C5.02044787,23 5,22.8738751 5,21.0833333 L5,4.91666667 C5,3.12612489 5.02044787,3 6.85714286,3 Z M8,12 C7.44771525,12 7,12.4477153 7,13 C7,13.5522847 7.44771525,14 8,14 L15,14 C15.5522847,14 16,13.5522847 16,13 C16,12.4477153 15.5522847,12 15,12 L8,12 Z M8,16 C7.44771525,16 7,16.4477153 7,17 C7,17.5522847 7.44771525,18 8,18 L11,18 C11.5522847,18 12,17.5522847 12,17 C12,16.4477153 11.5522847,16 11,16 L8,16 Z" fill="#000000" fill-rule="nonzero"></path>
+                                        </g>
+                                    </svg>
+                                    <!--end::Svg Icon-->
+                                </span>
+                            </div>
+                        </div>
+                        <div class="navi-text">
+                            <div class="font-weight-bold">Crea un caso</div>
+                            <div class="text-muted">Si tienes dudas o necesitas ayuda crea un caso aquí</div>
+                        </div>
+                    </div>
+                </a>
+                <!--end:Item-->
+            </div>
+            <!--end::Nav-->
+            <!--begin::Separator-->
+            <div class="separator separator-dashed my-7"></div>
+            <!--end::Separator-->
+        <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+        <!--end::Content-->
+    </div>
+    <!-- end::User Panel-->
+    <!--begin::Scrolltop-->
+    <div id="kt_scrolltop" class="scrolltop">
+        <span class="svg-icon">
+            <!--begin::Svg Icon | path:~/assets/media/svg/icons/Navigation/Up-2.svg-->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                    <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1"></rect>
+                    <path d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z" fill="#000000" fill-rule="nonzero"></path>
+                </g>
+            </svg>
+            <!--end::Svg Icon-->
+        </span>
+    </div>
+
+
+    <div class="page-loader page-loader-logo">
+        <img alt="Logo" class="max-h-25px" src="./Pagos - SmartCampus_files/smartLogo1_Azul.png">
+        <div class="spinner spinner-primary"></div>
+    </div>
+
+    <div class="modal fade" id="modalloading" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm " role="document">
+            <div class="modal-body panel-heading">
+                <img src="./Pagos - SmartCampus_files/GifPoli.gif">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ModalInhabilitado" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body p-1">
+                    <div class="d-flex flex-column flex-center">
+                        <!--begin::Symbol-->
+                        <div style="background-color:white" class="symbol symbol-120 overflow-hidden">
+                            <span style="background-color:white" class="symbol-label">
+                                <img src="./Pagos - SmartCampus_files/warning.png" class="h-75 align-self-end" alt="">
+                            </span>
+                        </div>
+                        <!--end::Symbol-->
+                    </div>
+                    
+                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary font-weight-bold" data-dismiss="modal"><i class="fas fa-check-circle"></i> Entendido</button>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--end::Page Loader-->
+    <script>var HOST_URL = "";</script>
+    <!--begin::Global Config(global config for global JS scripts)-->
+    <script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
+    <!--end::Global Config-->
+    <!--begin::Global Theme Bundle(used by all pages)-->
+    <script src="./Pagos - SmartCampus_files/plugins.bundle.js.descarga"></script>
+    <script src="./Pagos - SmartCampus_files/prismjs.bundle.js.descarga"></script>
+    <script src="./Pagos - SmartCampus_files/scripts.bundle.js.descarga"></script>
+    <script src="./Pagos - SmartCampus_files/logicaindex.js.descarga"></script>
+    <script src="./Pagos - SmartCampus_files/apexcharts"></script>
+    <!--end::Global Theme Bundle-->
+    <!--begin::Page Vendors(used by this page)-->
+    <script src="./Pagos - SmartCampus_files/fullcalendar.bundle.js.descarga"></script>
+    <!--end::Page Vendors-->
+    <!--begin::Page Scripts(used by this page)-->
+    <script src="./Pagos - SmartCampus_files/widgets.js.descarga"></script>
+    <script src="./Pagos - SmartCampus_files/eventscom.js.descarga"></script>
+    <script src="./Pagos - SmartCampus_files/hedersBanner.js.descarga"></script>
+    <!--end::Page Scripts-->
+
+    <div style="display:none">
+        <iframe id="logout_iframeB9" src="./Pagos - SmartCampus_files/saved_resource.html" style="width:0;height:0;border:0; border:none;"></iframe>
+        <iframe id="logout_iframeB8" src="./Pagos - SmartCampus_files/saved_resource(1).html" style="width:0;height:0;border:0; border:none;"></iframe>
+    </div>
+    <script>
+
+
+            function logOutBanner() {
+
+                var btn = KTUtil.getById("btnCerrarSesion");
+                KTUtil.btnWait(btn, "spinner spinner-right spinner-white pr-15", "Cerrando Sesión");
+
+                document.getElementById('logout_iframeB9').src = "https://sso.poli.edu.co/cas/logout?url=https://serviciosreg.poli.edu.co/StudentRegistrationSsb";
+                setTimeout(function () {
+                    document.getElementById('logout_iframeB8').src = "https://serviciosssb.poli.edu.co/SisAcademico/twbkwbis.P_Logout";
+                }, 2000);
+
+                // document.getElementById('logout_iframeB9').src = "https://estudiantes.poli.edu.co/StudentRegistrationSsb/ssb/saml/logout?local=true";
+                // setTimeout(function () {
+                //     document.getElementById('logout_iframeB8').src = "https://estudiantes.poli.edu.co/SisAcademico/twbkwbis.P_Logout";
+                // }, 2000);
+
+                setTimeout(function () {
+                    window.location.href = "/Account/LogOut";
+                }, 4000);
+
+                /*let frameb9 = document.getElementById('logout_iframeB9');
+                frameb9.src = "https://estudiantes.poli.edu.co/StudentRegistrationSsb/ssb/saml/logout?local=true";
+                frameb9.onload = function () {
+                    let frameb8 = document.getElementById('logout_iframeB8');
+                    frameb8.src = "https://estudiantes.poli.edu.co/SisAcademico/twbkwbis.P_Logout";
+                    frameb8.onload = function () {
+                        window.location.href = "/Account/Logout";
+                    }
+                }
+                */
+            }
+
+
+       
+
+        
+
+    </script>
+
+    <script>!function (e, t, a, n, g) { e[n] = e[n] || [], e[n].push({ "gtm.start": (new Date).getTime(), event: "gtm.js" }); var m = t.getElementsByTagName(a)[0], r = t.createElement(a); r.async = !0, r.src = "https://www.googletagmanager.com/gtm.js?id=GTM-NRGCHQ", m.parentNode.insertBefore(r, m) }(window, document, "script", "dataLayer")</script>
+
+    
+
+
+
+<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><div id="eagle-drag-images" style="position: fixed; top: -100000px;"></div></body><!--end::Body--></html>

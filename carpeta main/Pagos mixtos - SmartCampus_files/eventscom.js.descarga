@@ -1,0 +1,55 @@
+// window.onload = function() {
+    let canvas_data = localStorage.getItem('hide_elem_canvas');
+    let ifr = document.querySelector(".iframeContentDashboard");
+    if (ifr) {
+        ifr.style.height = '1450px';
+    }
+    // console.log('hoooss');
+    // Register the event listener
+    var eventMethod = window.addEventListener
+        ? "addEventListener"
+        : "attachEvent";
+    var eventer = window[eventMethod];
+    var messageEvent = eventMethod === "attachEvent"
+        ? "onmessage"
+        : "message";
+    eventer(messageEvent, receiveMessage);
+    console.log('agrego evento');
+    if (canvas_data == 'hide') {
+        console.log('ocultojvlocal');
+        let el = document.querySelector("#canvas_access");
+        let ell = el.querySelector("a");
+        ell.setAttribute('href','#');
+        ell.onclick = function () {
+            alert("(Para ingresar al aula, debe diligenciar la(s) encuestas en el dashboard");
+            // window.location.href = "/smartcampus";
+            window.location.href = "/";
+        }
+    }
+    function receiveMessage(e) {
+        if (e.data == 'hide_element') {
+            console.log('ocultojv');
+            let el = document.querySelector("#canvas_access");
+            let ell = el.querySelector("a");
+            ell.setAttribute('href','#');
+            ell.onclick = function () {
+                alert("(Para ingresar al aula, debe diligenciar la(s) encuestas en el dashboard");
+                // window.location.href = "/smartcampus";
+                window.location.href = "/";
+            }
+            localStorage.setItem("hide_elem_canvas", "hide");
+            // el.style.display = 'none';
+        }
+        if (e.data == 'show_element') {
+            console.log('muestrojv');
+            let el = document.querySelector("#canvas_access");
+            let ell = el.querySelector("a");
+            ell.setAttribute('href','https://poli.instructure.com/login/saml');
+            ell.onclick = null;
+            localStorage.removeItem("hide_elem_canvas");
+            // el.style.display = 'flex';
+        }
+        //console.log(e.origin);
+        //console.log(e.data);
+    }
+// }

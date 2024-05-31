@@ -1,0 +1,139 @@
+﻿
+
+$("#selectMateria").change(function () {
+    mostrarNota()
+}); 
+
+
+$("#selectPeriodo").change(function () {
+    filtrarMaterias()
+});
+
+
+
+function filtrarMaterias() {
+
+    var periodoSeleccionado = document.getElementById('selectPeriodo').value;
+    var materias = document.querySelectorAll('.materia');
+
+    materias.forEach(function (materia) {
+        if (materia.getAttribute('data-periodo') === periodoSeleccionado || periodoSeleccionado === "todos") {
+            materia.style.display = 'block';
+        } else {
+            materia.style.display = 'none';
+        }
+    });
+}
+
+function mostrarNota() {
+  
+    var select = document.getElementById("selectMateria");
+    var notaSeleccionada = select.options[select.selectedIndex].getAttribute('data-nota');
+
+    $("#nota").text('');
+    $("#nota").text(notaSeleccionada);
+} 
+var promedio = $("#promedio").val();
+
+var valorFormateado = parseFloat(promedio.replace(',', '.')).toFixed(1);
+
+var optionsPromedio = {
+    series: [{
+        name: "Promedio Total",
+        data: [valorFormateado] // Asegúrate de que esto sea un array
+    }],
+    chart: {
+        height: 300,
+        type: 'bar', // Tipo de gráfico de barras
+        zoom: {
+            enabled: false
+        }
+    },
+    plotOptions: {
+        bar: {
+            horizontal: true, // Orientación horizontal
+            columnWidth: '100%', // Ancho de la barra al 100% del espacio disponible
+            endingShape: 'flat' // Forma de la barra
+        }
+    },
+    dataLabels: {
+        enabled: false
+    },
+    stroke: {
+        curve: 'straight'
+    },
+    title: {
+        text: 'Promedio General',
+        align: 'left'
+    },
+    grid: {
+        row: {
+            colors: ['#f3f3f3', 'transparent'], // Color de fondo de la fila
+            opacity: 0.5
+        }
+    },
+    yaxis: {
+        min: 1, // Valor mínimo del eje Y
+        max: 5, // Valor máximo del eje Y
+        tickAmount: 5, // Cantidad de marcas en el eje Y
+        title: {
+            text: 'Promedio'
+        }
+    },
+    xaxis: {
+        categories: ['Promedio'] // Etiquetas del eje X
+    }
+};
+
+var chartPromedio = new ApexCharts(document.querySelector("#chartPromedio"), optionsPromedio);
+chartPromedio.render();
+
+var avance = $("#avance").val();
+
+var options = {
+    chart: {
+        height: 150,
+        type: 'radialBar',
+    },
+    series: [avance.slice(0, -1)],
+    labels: [''],
+    plotOptions: {
+        radialBar: {
+            dataLabels: {
+                name: {
+                    fontSize: '22px',
+                },
+                value: {
+                    fontSize: '16px',
+                    formatter: function (val) {
+                        return avance; // Mostrar el valor de avance en el centro
+                    }
+                },
+                total: {
+                    show: true,
+                    label: avance,
+                    formatter: function (w) {
+                        // No mostrar el total
+                        return '';
+                    }
+                }
+            }
+        }
+    },
+    center: {
+        // Posición del texto en el centro
+        offsetX: 0,
+        offsetY: 0,
+        // Texto personalizado
+        text: avance,
+        // Estilo del texto
+        style: {
+            fontSize: '30px',
+            color: '#000000'
+        }
+    }
+};
+
+var chartProgress = new ApexCharts(document.querySelector("#chartProgress"), options);
+
+chartProgress.render();

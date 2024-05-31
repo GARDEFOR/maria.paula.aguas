@@ -1,0 +1,49 @@
+﻿@charset "UTF-8";
+
+/*----------------------------------------------------------------*/
+/*--- Estilos malla estudiantil ----------------------------------*/
+.bg-c-approved {
+    background-color: #9acd25 !important
+}
+
+.bg-c-message {
+    background-color: #6ebac1 !important
+}
+
+.bg-c-homologated {
+    background-color: #ffeb5a !important
+}
+
+.bg-c-completed {
+    background-color: #c5e3f1 !important
+}
+
+.border-c-approved {
+    border-color: #9acd25
+}
+
+.border-c-homologated {
+    border-color: #ffeb5a
+}
+
+.border-c-completed {
+    border-color: #c5e3f1
+}
+
+.border-white-pill {
+    border-radius: .42rem;
+    border: 1px solid;
+}
+
+.border-c-notcompleted {
+    border-color: #888 !important;
+    color: #888 !important;
+}
+
+.size-malla-subject {
+    min-width: 190px;
+    max-width: 190px;
+    min-height: 190px;
+}
+
+/*----------------------------------------------------------------*/
